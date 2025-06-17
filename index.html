@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <div class="container my-5 text-center">
+            <div class="title position-relative m-auto mb-5">  <h1 class="main-title text-center title-font pt-2  ">Bookmarker</h1></div>
+            <hr>
+            <h2 class="secondary-font"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i> </h2>
+
+            <main class="container d-flex flex-column align-items-start mt-4 ps-3 pe-3">
+                <label for="siteNameInput" class="pb-2 fw-bold"><i class="fa-solid fa-book-bookmark me-2"></i>Site Name</label>
+
+                <input oninput="validateSiteName()" type="text" placeholder="Bookmark Name" id="siteNameInput" class="form-control mb-4" name="bookmarkName">
+
+
+
+                <label for="websiteURLInput" class="pb-2 fw-bold"><i class="fa-solid fa-link me-2"></i>Site URL</label>
+                <input oninput="validateWebsiteURL()" type="text" placeholder="Website URL" id="websiteURLInput" class="form-control" name="websiteURL">
+                <button class="btn d-block m-auto submit-btn text-white mt-4 mb-2" onclick="submitSite()">Submit</button>
+            </main>
+            <hr>
+
+            <table class="table mt-4 text-center">
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tbody">
+                    <!-- <tr>
+                        <td>facebook</td>
+                        <td>facebook</td>
+                        <td>
+                            <button class="btn visit-btn text-white"><i class="fa-solid fa-eye"></i> Visit</button>
+                        </td>
+                        <td>
+                            <button class="btn delete-btn text-white"><i class="fa-solid fa-trash-can"></i> Delete</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
